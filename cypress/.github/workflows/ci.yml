@@ -1,42 +1,10 @@
-name: Run Cypress Tests
-
-# Quando o workflow será disparado
-on:
-  push:
-    branches:
-      - main   # Ou qualquer outra branch de sua escolha, como 'develop'
-  pull_request:
-    branches:
-      - main   # Ou qualquer outra branch de sua escolha
-
+name: End-to-end tests
+on: push
 jobs:
   cypress-run:
-    runs-on: ubuntu-latest  # A máquina onde o workflow vai rodar (Ubuntu é o mais comum)
-
+    runs-on: ubuntu-22.04
     steps:
-      # Etapa 1: Checkout do código
-      - name: Checkout code
-        uses: actions/checkout@v2  # Pega o código do repositório
-
-      # Etapa 2: Configuração do Node.js
-      - name: Set up Node.js
-        uses: actions/setup-node@v2
-        with:
-          node-version: '14'  # Versão do Node.js que você está usando no projeto
-
-      # Etapa 3: Instalação das dependências do projeto
-      - name: Install dependencies
-        run: npm install  # Isso irá instalar todas as dependências do seu package.json
-
-      # Etapa 4: Rodando os testes do Cypress
-      - name: Run Cypress tests
-        run: npx cypress run  # Executa os testes do Cypress
-
-      # Etapa 5: Publicar os resultados do Cypress (opcional)
-      - name: Upload Cypress videos and screenshots
-        uses: actions/upload-artifact@v2
-        with:
-          name: cypress-artifacts
-          path: |
-            cypress/videos
-            cypress/screenshots
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Cypress run
+        uses: cypress-io/github-action@v6
