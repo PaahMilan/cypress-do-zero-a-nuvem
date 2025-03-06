@@ -157,8 +157,4 @@ cy.contains( 'Política de Privacidade').invoke('removeAttr', 'target')
 cy.contains('h1','CAC TAT - Política de Privacidade').should('be.visible')
 })
 
-it.only('',()=>{
-
-
-})
 })
