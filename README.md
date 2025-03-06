@@ -1,28 +1,31 @@
-# 🌲 Cypress, do Zero à Nuvem ☁️
+# Introdução
 
-👋 Seja bem-vindo(a)!
+Um pequeno projeto para demonstrar e auxilar em comandos personalizado do Cypress  `cy.dataTest` .
 
-É muito bom tê-lo(a) aqui. Tenho certeza que você vai amar esse curso. ❤️
+## Pre Requisitos
 
-## O que você vai aprender?
+É necessário possuir o Node.js e npm instalado para executar o projeto.
 
-- Como configurar um projeto Cypress do zero
-- Como visitar páginas locais e remotas
-- Como lidar com os elementos mais comuns encontrados em aplicações web
-- Como testar upload de arquivos
-- Como realizar as mais diversas verificações de resultados esperados
-- Como criar comandos customizados
-- Como lidar com links que abrem em outra aba do navegador
-- Como rodar testes simulando as dimensões de um dispositivo móvel
-- Como resolver os mesmos problemas de diferentes formas, conhecendo a [API do Cypress](https://docs.cypress.io/api/table-of-contents)
-- Como criar uma documentação mínima para seu projeto de testes automatizados
-- Como executar os testes em um _workflow_ de integração contínua sempre que mudanças ocorrerem no código da aplicação (ou dos testes)
-- Como integrar seu _workflow_ de integração contínua com o Cypress Cloud (o serviço de gestão de testes do Cypress na nuvem)
+> Usei versions `v18.15.0` and `9.5.0` of Node.js e npm.
 
-## Vamos começar?
+## Instalação
 
-Vá para a seção [estrutura do curso](./lessons/_course-structure_.md).
+Execute o seguinte comando no terminal > npm install npm i
+E assim será realizado a instalação do cypress.
 
-___
+## Testes
 
-Este é um curso da **Escola Talking About Testing**.
+> **Observação:** Antes de executar os testes, realize uma cópa do arquivo, e coloque credenciais válidas. Exemplo > `cypress.env.example.json` ou `cypress.env.json`.
+
+## Comandos para execução do cypress pelo Terminal
+
+ Modo sem periférico > npm test npm t
+Modo interativo > npm run cy:open 
+
+## Para melhorias 
+
+Conto com sua ajuda e feedbacks para melhorias do documento ⭐.
+
+___________________________________________________________
+
+This project was created with 💚 Paloma
